@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة مقاومة الألوان</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>حاسبة مقاومة الألوان اعداد أ / علاء فريد</h1>
+        <h4>مدرسة الشهيد المقدم محمد عبداللاه صالح الصناعية العسكرية المشتركة</h4>
+        <div class="form-group">
+            <label for="band-count">عدد الألوان:</label>
+            <select id="band-count" onchange="updateBands()">
+                <option value="4">4 ألوان</option>
+                <option value="5">5 ألوان</option>
+                <option value="6">6 ألوان</option>
+            </select>
+        </div>
+        <div id="resistor" class="resistor">
+            <div id="cylinder">
+                <div id="band1" class="band"></div>
+                <div id="band2" class="band"></div>
+                <div id="band3" class="band"></div>
+                <div id="band4" class="band"></div>
+                <div id="band5" class="band hidden"></div>
+                <div id="band6" class="band hidden"></div>
+            </div>
+        </div>
+        <div id="colors">
+            <label>اختر الألوان:</label>
+            <select onchange="setColor(1)" id="color1"></select>
+            <select onchange="setColor(2)" id="color2"></select>
+            <select onchange="setColor(3)" id="color3"></select>
+            <select onchange="setColor(4)" id="color4"></select>
+            <select onchange="setColor(5)" id="color5" class="hidden"></select>
+            <select onchange="setColor(6)" id="color6" class="hidden"></select>
+        </div>
+        <button onclick="calculateResistance()" class="btn">احسب المقاومة</button>
+        <h5>عند تغيير لون المقاومة اضغط على احسب المقاومة</h5>
+        <div id="result-msg" class="result-msg"></div>
+        <h4>شكر خاص للمهندسة سماح على المجهود المبذول مع الطلبة</h4>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
